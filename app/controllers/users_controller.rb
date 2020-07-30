@@ -20,6 +20,7 @@ class UsersController < ApplicationController
     end
 
     def destroy
+        ##adding new coment
         @user.destroy
         session[:user_id] = nil if @user == current_user
         flash[:notice] = "Account and all associated articles successfully deleted"
